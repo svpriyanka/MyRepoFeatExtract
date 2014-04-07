@@ -42,12 +42,12 @@ int main(int argc, char* argv[]) {
        	feat.ExtractHGPPFeature();
 
 	// save results
-	// Method is defined to save either the Self-quotient image 
+	// Method takes in as a parameter either the Self-quotient image 
 	// or the histograms of various  Gabor Phase Patterns
-	bool isSQI=true,isReal=true,isGGPP=true;
+	bool isSQI=false,isReal=true,isGGPP=true;
 
 	cout<<"Retrieve output feature"<<endl;
-	Mat tmp=feat.RetrieveOutputFeature(!isSQI,isReal,!isGGPP);
+	Mat tmp=feat.RetrieveOutputFeature(isSQI,isReal,isGGPP);
 
 	string str="outputFeatures.feat";
 	FileStorage fs(str,FileStorage::WRITE);
