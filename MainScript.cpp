@@ -33,7 +33,7 @@ int main(int argc, char* argv[]) {
 
 	feat.DisplayImage(img);
 
- 	feat.AddNewImage(img);// add image to extraction
+ 	feat.AddNewImage(img);// add image to the extraction pipeline
 
         cout<<"Perform Feature Extraction...\n";
 
@@ -42,7 +42,8 @@ int main(int argc, char* argv[]) {
        	feat.ExtractHGPPFeature();
 
 	// save results
-	// Method is definedto save either the Self-quotient image or the histograms of various  Gabor Phase Patterns
+	// Method is defined to save either the Self-quotient image 
+	// or the histograms of various  Gabor Phase Patterns
 	bool isSQI=true,isReal=true,isGGPP=true;
 
 	cout<<"Retrieve output feature"<<endl;
