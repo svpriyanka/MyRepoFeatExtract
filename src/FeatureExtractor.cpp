@@ -192,7 +192,7 @@ Mat FeatureExtractor::RetrieveOutputFeature(bool isSQI,bool isReal,bool isGGPP)
 	          return sqi.getOutImage();
 	}
 	else{
-	  return hgpp.GetOutputHistogram(isReal,isGGPP);
+	  return hgpp.GetOutputHistogram(isReal,!isGGPP);
 	}
 
 }	
